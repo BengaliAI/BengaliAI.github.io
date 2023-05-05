@@ -6,3 +6,4 @@ Change Log:
 
 - 0.01v 
     1. Initialization of the project.
+    2. Initialization of Index.

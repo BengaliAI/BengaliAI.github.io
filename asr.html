@@ -158,7 +158,24 @@ Out-of-Distribution Benchmarking</br>
                     Abstract
                 </h3>
                 <p class="text-justify">
-Neural Radiance Field training can be accelerated through the use of grid-based representations in NeRF's learned mapping from spatial coordinates to colors and volumetric density. However, these grid-based approaches lack an explicit understanding of scale and therefore often introduce aliasing, usually in the form of jaggies or missing scene content. Anti-aliasing has previously been addressed by mip-NeRF 360, which reasons about sub-volumes along a cone rather than points along a ray, but this approach is not natively compatible with current grid-based techniques. We show how ideas from rendering and signal processing can be used to construct a technique that combines mip-NeRF 360 and grid-based models such as Instant NGP to yield error rates that are 8%-76% lower than either prior technique, and that trains 22x faster than mip-NeRF 360.
+We present OOD-Speech, the first out-of-distribution
+(OOD) benchmarking dataset for Bengali automatic
+speech recognition (ASR). Being one of the most spo-
+ken languages globally, Bengali portrays large diversity
+in dialects and prosodic features, which demands ASR
+frameworks to be robust towards distribution shifts. For
+example, islamic religious sermons in Bengali are deliv-
+ered with a tonality that is significantly different from
+regular speech. Our training dataset is collected via mas-
+sively online crowdsourcing campaigns which resulted in
+1177.94 hours collected and curated from 22, 645 native
+Bengali speakers from South Asia. Our test dataset com-
+prises 23.03 hours of speech collected and manually anno-
+tated from 17 different sources, e.g., Bengali TV drama,
+Audiobook, Talk show, Online class, and Islamic sermons
+to name a few. OOD-Speech is jointly the largest pub-
+licly available speech dataset, as well as the first out-of-
+distribution ASR benchmarking dataset for Bengali.
                 </p>
             </div>
         </div>

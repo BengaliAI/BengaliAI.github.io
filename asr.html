@@ -37,7 +37,7 @@ licly available speech dataset, as well as the first out-of-
 distribution ASR benchmarking dataset for Bengali." />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields" />
+    <meta name="twitter:title" content="Bengali.AI Speech Recognition Project" />
     <meta name="twitter:description" content="We present OOD-Speech, the first out-of-distribution
 (OOD) benchmarking dataset for Bengali automatic
 speech recognition (ASR). Being one of the most spo-
@@ -81,7 +81,7 @@ distribution ASR benchmarking dataset for Bengali." />
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>Zip-NeRF</b>: OOD-Speech: A Large Bengali Speech Recognition Dataset for
+                <b>OOD-Speech</b>: A Large Bengali Speech Recognition Dataset for
 Out-of-Distribution Benchmarking</br> 
                 <small>
                 arXiv 2023
@@ -181,7 +181,7 @@ distribution ASR benchmarking dataset for Bengali.
         </div>
 
 
-        <div class="row">
+<!--         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Video
@@ -192,9 +192,9 @@ distribution ASR benchmarking dataset for Bengali.
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 <br>
-        <div class="row">
+<!--         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     360° Video Flythroughs
@@ -206,10 +206,10 @@ distribution ASR benchmarking dataset for Bengali.
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 <br>
 
-        <div class="row">
+<!--         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     XY aliasing
@@ -223,8 +223,8 @@ distribution ASR benchmarking dataset for Bengali.
                 </p>
             </div>
         </div>
-           
-        <div class="row">
+            -->
+<!--         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Z aliasing
@@ -236,7 +236,7 @@ distribution ASR benchmarking dataset for Bengali.
                     The proposal network used for resampling points along rays in mip-NeRF 360 results in an artifact we refer to as <em>z-aliasing</em>, where foreground content alternately appears and disappears as the camera moves toward or away from scene content. Z-aliasing occurs when the initial set of samples from the proposal network is not dense enough and misses thin structures, such as the chair above. Missed content can not be recovered by later rounds of sampling, since no future samples will be placed at that location along the ray. Our improvements to proposal network supervision result in a prefiltered proposal output that preserves the foreground object for all frames in this sequence. The plots above depict samples along a ray for three rounds of resampling (blue, orange, and green lines), with the y axis showing rendering weight (how much each interval contributes to the final rendered color), as a normalized probability density.
                 </p>
             </div>
-        </div>
+        </div> -->
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -245,12 +245,11 @@ distribution ASR benchmarking dataset for Bengali.
                 </h3>
                 <div class="form-group col-md-10 col-md-offset-1">
                     <textarea id="bibtex" class="form-control" readonly>
-@article{barron2023zipnerf,
-    title={Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields},
-    author={Jonathan T. Barron and Ben Mildenhall and 
-            Dor Verbin and Pratul P. Srinivasan and Peter Hedman},
-    journal={arXiv},
-    year={2023}
+@article{alam2022bengali,
+  title={Bengali common voice speech dataset for automatic speech recognition},
+  author={Alam, Samiul and Sushmit, Asif and Abdullah, Zaowad and Nakkhatra, Shahrin and Ansary, MD and Hossen, Syed Mobassir and Mehnaz, Sazia Morshed and Reasat, Tahsin and Humayun, Ahmed Imtiaz},
+  journal={arXiv preprint arXiv:2206.14053},
+  year={2022}
 }</textarea>
                 </div>
             </div>
@@ -262,9 +261,9 @@ distribution ASR benchmarking dataset for Bengali.
                     Acknowledgements
                 </h3>
                 <p class="text-justify">
-                Thanks to Janne Kontkanen, Rick Szeliski, and David Salesin for their comments on the text, and to Ricardo Martin-Brualla, Keunhong Park, Ben Poole, Aleksander Hołyński, Etienne Pot, Kostas Rematas, Daniel Duckworth, Marcos Seefelder, Cardin Moffett, and Peter Zhizhin for their advice and help.
+                Thanks to BUET, SUST, DIU, UIU, DU RME, A2I Bangladesh for their massive support. 
                     <br><br>
-                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a> and <a href="https://dorverbin.github.io/refnerf">Ref-NeRF</a>.
+                
                 </p>
             </div>
         </div>

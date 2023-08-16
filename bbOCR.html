@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <title>BaDLAD: A Large Multi-Domain Bengali
-Document Layout Analysis Dataset</title>
+    <title>bbOCR: An Open-source Multi-domain OCR Pipeline for Bengali Documents</title>
 
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,38 +16,63 @@ Document Layout Analysis Dataset</title>
     <meta property="og:image:height" content="840">
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://jonbarron.info/zipnerf/"/>
-    <meta property="og:title" content="BaDLAD: A Large Multi-Domain Bengali
-Document Layout Analysis Dataset" />
-    <meta property="og:description" content="While strides have been made in deep learning based Bengali Optical Character Recognition (OCR) in the past decade, absence
-of large Document Layout Analysis (DLA) datasets has hindered the application of OCR in document transcription, e.g., transcribing historical
-documents and newspapers. Moreover, rule-based DLA systems that are
-currently being employed in practice are not robust to domain variations
-and out-of-distribution layouts. To this end, we present the first multidomain large Bengali Document Layout Analysis Dataset: BaDLAD.
-This dataset contains 33
-, 695 human annotated document samples from
-six domains - i) books and magazines ii) public domain govt. documents
-iii) liberation war documents iv) new newspapers v) historical newspapers and vi) property deeds; with 710K polygon annotations for four
-unit types: text-box, paragraph, image, and table. Through preliminary
-experiments benchmarking the performance of existing state-of-the-art
-deep learning architectures for English DLA, we demonstrate the efficacy of our dataset in training deep learning based Bengali document
-digitization models." />
+    <meta property="og:title" content="bbOCR: An Open-source Multi-domain OCR Pipeline for Bengali Documents" />
+    <meta property="og:description" content="Although many Optical Character Recognition(OCR) meth-
+ods exit, the lack of comprehensive open-source systems
+hampers the progress of document digitization in many low-
+resource languages such as Bengali. The existing methods fo-
+cus primarily on individual tasks such as word-level OCR,
+document layout extraction, and distortion correction mostly
+in high-resource languages. Unfortunately, for low-resource
+languages, none is a practical system due to a lack of large-
+scale datasets for different document OCR components, and
+problems caused by an alphasyllabary writing system . More-
+over, a system-level evaluation metric that takes into ac-
+count the document layout and the text recognition simulta-
+neously is an under-explored area. In this paper, we intro-
+duce an open-source scalable document OCR system named
+Bengali-BRACU-OCR (bbOCR) for reconstructing the Ben-
+gali documents into a structured searchable digitized format
+considering the document layout, geometric distortions and
+illumination variations . For building this pipeline, we pro-
+vide two synthetic datasets and propose a customized model
+for Bengali text recognition. Besides evaluating the system
+at the component level, for a system-level extensive evalua-
+tion, we introduce a diversified evaluation dataset and com-
+prehensive evaluation metrics. The extensive evaluation sug-
+gests the practicality of our system over the state-of-the-art
+open-source Bengali Document OCR system in terms of met-
+rics and runtime. The source codes and datasets are available here." />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="BaDLAD: A Large Multi-Domain Bengali
-Document Layout Analysis Dataset" />
-    <meta name="twitter:description" content="While strides have been made in deep learning based Bengali Optical Character Recognition (OCR) in the past decade, absence
-of large Document Layout Analysis (DLA) datasets has hindered the application of OCR in document transcription, e.g., transcribing historical
-documents and newspapers. Moreover, rule-based DLA systems that are
-currently being employed in practice are not robust to domain variations
-and out-of-distribution layouts. To this end, we present the first multidomain large Bengali Document Layout Analysis Dataset: BaDLAD.
-This dataset contains 33
-, 695 human annotated document samples from
-six domains - i) books and magazines ii) public domain govt. documents
-iii) liberation war documents iv) new newspapers v) historical newspapers and vi) property deeds; with 710K polygon annotations for four
-unit types: text-box, paragraph, image, and table. Through preliminary
-experiments benchmarking the performance of existing state-of-the-art
-deep learning architectures for English DLA, we demonstrate the efficacy of our dataset in training deep learning based Bengali document
-digitization models." />
+    <meta name="twitter:title" content="bbOCR: An Open-source Multi-domain OCR Pipeline for Bengali Documents" />
+    <meta name="twitter:description" content="Although many Optical Character Recognition(OCR) meth-
+ods exit, the lack of comprehensive open-source systems
+hampers the progress of document digitization in many low-
+resource languages such as Bengali. The existing methods fo-
+cus primarily on individual tasks such as word-level OCR,
+document layout extraction, and distortion correction mostly
+in high-resource languages. Unfortunately, for low-resource
+languages, none is a practical system due to a lack of large-
+scale datasets for different document OCR components, and
+problems caused by an alphasyllabary writing system . More-
+over, a system-level evaluation metric that takes into ac-
+count the document layout and the text recognition simulta-
+neously is an under-explored area. In this paper, we intro-
+duce an open-source scalable document OCR system named
+Bengali-BRACU-OCR (bbOCR) for reconstructing the Ben-
+gali documents into a structured searchable digitized format
+considering the document layout, geometric distortions and
+illumination variations . For building this pipeline, we pro-
+vide two synthetic datasets and propose a customized model
+for Bengali text recognition. Besides evaluating the system
+at the component level, for a system-level extensive evalua-
+tion, we introduce a diversified evaluation dataset and com-
+prehensive evaluation metrics. The extensive evaluation sug-
+gests the practicality of our system over the state-of-the-art
+open-source Bengali Document OCR system in terms of met-
+rics and runtime. The source codes and datasets are available
+here." />
     <meta name="twitter:image" content="https://raw.githubusercontent.com/BengaliAI/bengaliai.github.io/main/images/badlad-icon.png" />
 
 
@@ -74,10 +98,9 @@ digitization models." />
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>BaDLAD</b>: A Large Multi-Domain Bengali
-Document Layout Analysis Dataset</br> 
+                <b>bbOCR</b>: An Open-source Multi-domain OCR Pipeline for Bengali Documents</br> 
                 <small>
-                ICDAR 2023
+                arxiv 2023
                 </small>
             </h2>
         </div>
@@ -85,22 +108,45 @@ Document Layout Analysis Dataset</br>
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
 			<li>
-                        <a href="https://scholar.google.com/citations?user=JmTaGcYAAAAJ&hl=en">
-                            Shihab Istiaq
+                        <a href="https://bucse.net/faculty_profile/76/shayekh_bin_islam">
+                            Shayekh Bin Islam
                         </a>
                     </li>
 		   <li>
-                        <a href="https://www.linkedin.com/in/rakibulranak/">
-                          Rakibul Ranak
+                        <a href="https://dblp.org/pid/334/4024.html">
+                          Imam Mohammad Zulkarnain
                         </a>
                     </li>
 		<li>
-                        <a href="https://www.linkedin.com/in/emon-swe-sust/">
-                          Mahfuzur Emon
+                        <a href="https://nub.ac.bd/pims/faculty-member/9ajc4gof/md.-zami-al-zunaed-farabe">
+                          Md. Zami Al Zunaed Farabe
                         </a>
                     </li>
 
+				<li>
+                        <a href="https://sites.google.com/view/md-mehedi-hasan-shawon/home">
+                          MD. Mehedi Hasan Shawon
+                        </a>
+                    </li>	
 
+				<li>
+                        <a href="https://scholar.google.com/citations?user=EaNBod8AAAAJ">
+                          Jawaril Munshad Abedin
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://scholar.google.com/citations?user=Pt5C0gYAAAAJ">
+                          Beig Rajibul Hasan
+                        </a>
+                    </li>
+
+			                    <li>
+                        <a href="https://www.linkedin.com/in/marsia-haque-meghla-321021207/">
+                          Marsia Meghla
+                        </a>
+                    </li>
+			
                     <li>
                         <a href="https://www.linkedin.com/in/mobassir-hossen-916a83137/">
                           Syed Mobassir
@@ -111,68 +157,13 @@ Document Layout Analysis Dataset</br>
                           Nazmuddoha Ansary
                         </a>
                     </li>
-		
-                    <li>
-                        <a href="https://scholar.google.com/citations?user=Ks5-xygAAAAJ&hl=en">
-                          Intesur Ahmed
-                        </a>
-                    </li>
-	                <li>
-                        <a href="https://www.linkedin.com/in/fazle-rakib/">
-                          Fazle Rakib
-                        </a>
-                    </li>
-	                <li>
-                        <a href="https://www.linkedin.com/in/shahriardhruvo/?originalSubdomain=bd">
-                          Shahrier Dhrubo
-                        </a>
-                    </li>		
-	                <li>
-                        <a href="https://www.linkedin.com/in/souhardya-saha/">
-                          Souhardya Dip
-                        </a>
-                    </li>
-			                <li>
-                        <a href="https://www.linkedin.com/in/akibhasanpavel/?originalSubdomain=bd">
-                          Akib Pavel
-                        </a>
-                    </li>
-			                <li>
-                        <a href="https://www.linkedin.com/in/marsia-haque-meghla-321021207/">
-                          Marsia Meghla
-                        </a>
-                    </li>
-			
-				                <li>
-                        <a href="https://scholar.google.com/citations?user=HaI-oFUAAAAJ&hl=en">
-                          Rezwanul Haque
-                        </a>
-                    </li>
-				                <li>
-                        <a href="https://www.sust.edu/institutes/iict/faculty/10">
-                          Sayma Chowdhury
-                        </a>
-                    </li>		
-			
+
                     <li>
                         <a href="https://people.bengali.ai/farig/">
                           Farig Sadeq
                         </a>
                     </li>
 
-			
-					<li>
-                        <a href="https://scholar.google.com/citations?user=W_okWy0AAAAJ&hl=en">
-                          Tahsin Reasat
-                        </a>
-                    </li>
-						<li>
-                        <a href="https://imtiazhumayun.github.io/">
-                          Ahmed Imtiaz Humayun
-                        </a>
-                    </li>
-
-			
 		                        <li>
                         <a href="https://people.bengali.ai/sushmit/">
                           Asif Sushmit
@@ -195,7 +186,7 @@ Document Layout Analysis Dataset</br>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/BengaliAI/BADLAD">
+                            <a href="https://github.com/BengaliAI/bbocr">
                             <image src="https://raw.githubusercontent.com/BengaliAI/bengaliai.github.io/main/images/GitHub-Mark.png" height="60px">
                                 <h4><strong>Github Repo</strong></h4>
                             </a>
@@ -206,20 +197,6 @@ Document Layout Analysis Dataset</br>
                                 <h4><strong>Download Dataset</strong></h4>
                             </a>
                         </li>
-			<li>
-                            <a href="https://www.kaggle.com/datasets/reasat/badlad-train/settings">
-                            <image src="https://raw.githubusercontent.com/BengaliAI/bengaliai.github.io/main/images/badladsample.jpg" height="60px">
-                                <h4><strong>4 Million Unannotated Samples</strong></h4>
-                            </a>
-                        </li>
-
-			<li>
-                            <a href="https://www.kaggle.com/c/dlsprint2">
-                            <image src="https://raw.githubusercontent.com/BengaliAI/bengaliai.github.io/main/images/kaggle.png" height="60px">
-                                <h4><strong>DLSprint2.0 Kaggle Competition</strong></h4>
-                            </a>
-                        </li>
-
 			</ul>
                 </div>
         </div>
@@ -240,13 +217,10 @@ Document Layout Analysis Dataset</br>
 	  <div class="row">
 	<div class="col-md-8 col-md-offset-2">
     <div class="image">
-      <img src="https://raw.githubusercontent.com/BengaliAI/bengaliai.github.io/main/images/badlad.png" alt="Your Image", width = 400, height=320>
+      <img src="https://raw.githubusercontent.com/BengaliAI/bengaliai.github.io/main/images/bbOCR.png" alt="Your Image", width = 400, height=320>
     </div>
     <div class="text">
-      <p>Predictions of M-RCNN-101 model on BaDLAD Test samples. The con-
-tents of the third sample (from the Property deeds domain) has been redacted
-for confidentiality. The first 3 samples show only bounding box predictions and
-the rest show segmentation boundaries.</p>
+      <p>bbOCR reconstruction of sample document. The document has been analyzed and the OCR output has been converted to HTML format.</p>
     </div>
 		  </div>
   </div>
@@ -259,19 +233,33 @@ the rest show segmentation boundaries.</p>
                     Abstract
                 </h3>
                 <p class="text-justify">
-While strides have been made in deep learning based Bengali Optical Character Recognition (OCR) in the past decade, absence
-of large Document Layout Analysis (DLA) datasets has hindered the application of OCR in document transcription, e.g., transcribing historical
-documents and newspapers. Moreover, rule-based DLA systems that are
-currently being employed in practice are not robust to domain variations
-and out-of-distribution layouts. To this end, we present the first multidomain large Bengali Document Layout Analysis Dataset: BaDLAD.
-This dataset contains 33
-, 695 human annotated document samples from
-six domains - i) books and magazines ii) public domain govt. documents
-iii) liberation war documents iv) new newspapers v) historical newspapers and vi) property deeds; with 710K polygon annotations for four
-unit types: text-box, paragraph, image, and table. Through preliminary
-experiments benchmarking the performance of existing state-of-the-art
-deep learning architectures for English DLA, we demonstrate the efficacy of our dataset in training deep learning based Bengali document
-digitization models.
+Although many Optical Character Recognition(OCR) meth-
+ods exit, the lack of comprehensive open-source systems
+hampers the progress of document digitization in many low-
+resource languages such as Bengali. The existing methods fo-
+cus primarily on individual tasks such as word-level OCR,
+document layout extraction, and distortion correction mostly
+in high-resource languages. Unfortunately, for low-resource
+languages, none is a practical system due to a lack of large-
+scale datasets for different document OCR components, and
+problems caused by an alphasyllabary writing system . More-
+over, a system-level evaluation metric that takes into ac-
+count the document layout and the text recognition simulta-
+neously is an under-explored area. In this paper, we intro-
+duce an open-source scalable document OCR system named
+Bengali-BRACU-OCR (bbOCR) for reconstructing the Ben-
+gali documents into a structured searchable digitized format
+considering the document layout, geometric distortions and
+illumination variations . For building this pipeline, we pro-
+vide two synthetic datasets and propose a customized model
+for Bengali text recognition. Besides evaluating the system
+at the component level, for a system-level extensive evalua-
+tion, we introduce a diversified evaluation dataset and com-
+prehensive evaluation metrics. The extensive evaluation sug-
+gests the practicality of our system over the state-of-the-art
+open-source Bengali Document OCR system in terms of met-
+rics and runtime. The source codes and datasets are available
+here .
                 </p>
             </div>
         </div>
@@ -356,7 +344,7 @@ digitization models.
                     Annotators
                 </h3>
                 <p class="text-justify">
-                Fahim Ahmed, Ikram Shams, Asif Ikbal, Md. Junayeth Bhuiyan, Md. Nazibul Islam, Nowshin Noweer Nisa, Dipannita Das Tondra, Umme Humaiara Samia, Emu Akter, Kamrun Naher Pritha, Al Amin Shawon, Samiur Rahman Anadi, Kazi Md. Ashaduj Jaman  
+                Marshia Haque Meghla, Junayed Bhuiyan.  
                     <br><br>
                 .
                 </p>
@@ -372,9 +360,7 @@ digitization models.
                 </h3>
                 <p class="text-justify">
                 We are thankful to Center for Bangladesh Genocide Research - CBGR for sharing some invaluable
-                    historical documents for this dataset. We also thank the Department of Software Engineering
-                    in Shahjalal University of Science and Technology,
-                    for their support.  
+                    historical documents for this dataset.  
                     <br><br>
                 .
                 </p>
@@ -388,7 +374,7 @@ digitization models.
                     Contact
                 </h3>
                 <p class="text-justify">
-                research.bengaliai@gmail.com, sushmit@ieee.org  
+                research.bengaliai@gmail.com, farig.sadeque@bracu.ac.bd, sushmit@ieee.org 
                     <br><br>
                 .
                 </p>
